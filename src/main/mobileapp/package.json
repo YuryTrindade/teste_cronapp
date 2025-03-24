@@ -1,0 +1,12 @@
+{
+  "name": "io.cronapp.apps.treinamentosescrj",
+  "displayName": "Treinamento SESC RJ",
+  "version": "1.0.0",
+  "description": "Treinamento SESC RJ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CronApp IDE",
+  "license": "Apache-2.0"
+}
