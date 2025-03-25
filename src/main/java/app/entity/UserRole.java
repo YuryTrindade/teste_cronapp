@@ -1,13 +1,18 @@
+
 package app.entity;
 
 import java.io.*;
 import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela USER_ROLE
@@ -18,8 +23,8 @@ import cronapi.rest.security.CronappSecurity;
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.UserRole")
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class UserRole implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,8 +35,10 @@ public class UserRole implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
@@ -41,6 +48,7 @@ public class UserRole implements Serializable {
         
         private Role role;
 
+
     /**
     * @generated
     */
@@ -48,6 +56,7 @@ public class UserRole implements Serializable {
     @JoinColumn(name="user_id", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "USER_ROLE_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
         
         private User user;
+
 
     /**
     * Construtor
@@ -61,8 +70,7 @@ public class UserRole implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -71,7 +79,7 @@ public class UserRole implements Serializable {
     * @param id id
     * @generated
     */
-    public UserRole setId(java.lang.String id){
+    public UserRole setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -80,8 +88,7 @@ public class UserRole implements Serializable {
     * return role
     * @generated
     */
-    
-    public Role getRole(){
+    public Role getRole() {
         return this.role;
     }
 
@@ -90,7 +97,7 @@ public class UserRole implements Serializable {
     * @param role role
     * @generated
     */
-    public UserRole setRole(Role role){
+    public UserRole setRole(Role role) {
         this.role = role;
         return this;
     }
@@ -99,8 +106,7 @@ public class UserRole implements Serializable {
     * return user
     * @generated
     */
-    
-    public User getUser(){
+    public User getUser() {
         return this.user;
     }
 
@@ -109,7 +115,7 @@ public class UserRole implements Serializable {
     * @param user user
     * @generated
     */
-    public UserRole setUser(User user){
+    public UserRole setUser(User user) {
         this.user = user;
         return this;
     }

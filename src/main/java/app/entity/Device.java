@@ -1,13 +1,18 @@
+
 package app.entity;
 
 import java.io.*;
 import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela DEVICE
@@ -18,8 +23,8 @@ import cronapi.rest.security.CronappSecurity;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Device")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Device implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,50 +35,64 @@ public class Device implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Token")
     @Column(name = "token", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String token;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Platform")
     @Column(name = "platform", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String platform;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Model")
     @Column(name = "model", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String model;
 
+
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Platform Version")
     @Column(name = "platformVersion", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String platformVersion;
 
-    /**
-    * @generated
-    */
-    @Column(name = "appName", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.String appName;
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="App Name")
+    @Column(name = "appName", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String appName;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="STRING", label="App Version")
     @Column(name = "appVersion", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String appVersion;
+
 
     /**
     * Construtor
@@ -87,8 +106,7 @@ public class Device implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -97,7 +115,7 @@ public class Device implements Serializable {
     * @param id id
     * @generated
     */
-    public Device setId(java.lang.String id){
+    public Device setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -106,8 +124,7 @@ public class Device implements Serializable {
     * return token
     * @generated
     */
-    
-    public java.lang.String getToken(){
+    public java.lang.String getToken() {
         return this.token;
     }
 
@@ -116,7 +133,7 @@ public class Device implements Serializable {
     * @param token token
     * @generated
     */
-    public Device setToken(java.lang.String token){
+    public Device setToken(java.lang.String token) {
         this.token = token;
         return this;
     }
@@ -125,8 +142,7 @@ public class Device implements Serializable {
     * return platform
     * @generated
     */
-    
-    public java.lang.String getPlatform(){
+    public java.lang.String getPlatform() {
         return this.platform;
     }
 
@@ -135,7 +151,7 @@ public class Device implements Serializable {
     * @param platform platform
     * @generated
     */
-    public Device setPlatform(java.lang.String platform){
+    public Device setPlatform(java.lang.String platform) {
         this.platform = platform;
         return this;
     }
@@ -144,8 +160,7 @@ public class Device implements Serializable {
     * return model
     * @generated
     */
-    
-    public java.lang.String getModel(){
+    public java.lang.String getModel() {
         return this.model;
     }
 
@@ -154,7 +169,7 @@ public class Device implements Serializable {
     * @param model model
     * @generated
     */
-    public Device setModel(java.lang.String model){
+    public Device setModel(java.lang.String model) {
         this.model = model;
         return this;
     }
@@ -163,8 +178,7 @@ public class Device implements Serializable {
     * return platformVersion
     * @generated
     */
-    
-    public java.lang.String getPlatformVersion(){
+    public java.lang.String getPlatformVersion() {
         return this.platformVersion;
     }
 
@@ -173,7 +187,7 @@ public class Device implements Serializable {
     * @param platformVersion platformVersion
     * @generated
     */
-    public Device setPlatformVersion(java.lang.String platformVersion){
+    public Device setPlatformVersion(java.lang.String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
     }
@@ -182,8 +196,7 @@ public class Device implements Serializable {
     * return appName
     * @generated
     */
-    
-    public java.lang.String getAppName(){
+    public java.lang.String getAppName() {
         return this.appName;
     }
 
@@ -192,7 +205,7 @@ public class Device implements Serializable {
     * @param appName appName
     * @generated
     */
-    public Device setAppName(java.lang.String appName){
+    public Device setAppName(java.lang.String appName) {
         this.appName = appName;
         return this;
     }
@@ -201,8 +214,7 @@ public class Device implements Serializable {
     * return appVersion
     * @generated
     */
-    
-    public java.lang.String getAppVersion(){
+    public java.lang.String getAppVersion() {
         return this.appVersion;
     }
 
@@ -211,7 +223,7 @@ public class Device implements Serializable {
     * @param appVersion appVersion
     * @generated
     */
-    public Device setAppVersion(java.lang.String appVersion){
+    public Device setAppVersion(java.lang.String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
