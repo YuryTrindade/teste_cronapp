@@ -1,13 +1,18 @@
+
 package app.entity;
 
 import java.io.*;
 import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
+
+
+import cronapp.framework.core.persistence.*;
 
 /**
 * Classe que representa a tabela SECURABLE
@@ -18,8 +23,8 @@ import cronapi.rest.security.CronappSecurity;
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Securable")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Securable implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -30,15 +35,19 @@ public class Securable implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id;
+
 
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String name;
+
 
     /**
     * @generated
@@ -47,6 +56,7 @@ public class Securable implements Serializable {
     @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Application application;
+
 
     /**
     * Construtor
@@ -60,8 +70,7 @@ public class Securable implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -70,7 +79,7 @@ public class Securable implements Serializable {
     * @param id id
     * @generated
     */
-    public Securable setId(java.lang.String id){
+    public Securable setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -79,8 +88,7 @@ public class Securable implements Serializable {
     * return name
     * @generated
     */
-    
-    public java.lang.String getName(){
+    public java.lang.String getName() {
         return this.name;
     }
 
@@ -89,18 +97,16 @@ public class Securable implements Serializable {
     * @param name name
     * @generated
     */
-    public Securable setName(java.lang.String name){
+    public Securable setName(java.lang.String name) {
         this.name = name;
         return this;
     }
-
     /**
     * Obtém application
     * return application
     * @generated
     */
-    
-    public Application getApplication(){
+    public Application getApplication() {
         return this.application;
     }
 
@@ -109,7 +115,7 @@ public class Securable implements Serializable {
     * @param application application
     * @generated
     */
-    public Securable setApplication(Application application){
+    public Securable setApplication(Application application) {
         this.application = application;
         return this;
     }

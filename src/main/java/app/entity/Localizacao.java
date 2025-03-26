@@ -15,16 +15,16 @@ import cronapi.swagger.CronappSwagger;
 import cronapp.framework.core.persistence.*;
 
 /**
-* Classe que representa a tabela APPLICATION_USER
+* Classe que representa a tabela LOCALIZACAO
 * @generated
 */
 @jakarta.persistence.Entity
-@jakarta.persistence.Table(name = "\"APPLICATION_USER\"")
+@jakarta.persistence.Table(name = "\"LOCALIZACAO\"")
 @XmlRootElement
-@CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
-@JsonFilter("app.entity.ApplicationUser")
-@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
-public class ApplicationUser implements Serializable {
+@CronappSecurity
+@JsonFilter("app.entity.Localizacao")
+@CronappTable(role=CronappTableRole.CLASS)
+public class Localizacao implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -35,7 +35,7 @@ public class ApplicationUser implements Serializable {
     * @generated
     */
     @Id
-    @CronappColumn(attributeType="STRING", label="Id")
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -43,26 +43,17 @@ public class ApplicationUser implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @CronappColumn(attributeType="STRING", label="Info")
+    @Column(name = "Info", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private Application application;
-
-
-    /**
-    * @generated
-    */
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "APPLICATION_USER_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
-        
-        private User user;
+        private java.lang.String info;
 
 
     /**
     * Construtor
     * @generated
     */
-    public ApplicationUser(){
+    public Localizacao(){
     }
 
     /**
@@ -79,44 +70,26 @@ public class ApplicationUser implements Serializable {
     * @param id id
     * @generated
     */
-    public ApplicationUser setId(java.lang.String id) {
+    public Localizacao setId(java.lang.String id) {
         this.id = id;
         return this;
     }
     /**
-    * Obtém application
-    * return application
+    * Obtém info
+    * return info
     * @generated
     */
-    public Application getApplication() {
-        return this.application;
+    public java.lang.String getInfo() {
+        return this.info;
     }
 
     /**
-    * Define application
-    * @param application application
+    * Define info
+    * @param info info
     * @generated
     */
-    public ApplicationUser setApplication(Application application) {
-        this.application = application;
-        return this;
-    }
-    /**
-    * Obtém user
-    * return user
-    * @generated
-    */
-    public User getUser() {
-        return this.user;
-    }
-
-    /**
-    * Define user
-    * @param user user
-    * @generated
-    */
-    public ApplicationUser setUser(User user) {
-        this.user = user;
+    public Localizacao setInfo(java.lang.String info) {
+        this.info = info;
         return this;
     }
 
@@ -127,7 +100,7 @@ public class ApplicationUser implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ApplicationUser object = (ApplicationUser)obj;
+Localizacao object = (Localizacao)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
