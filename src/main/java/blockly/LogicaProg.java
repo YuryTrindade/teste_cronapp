@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param valorEntrada
  *
  * @author Yury Trindade Da Cunha
- * @since 25/03/2025, 12:51:03
+ * @since 26/03/2025, 10:46:11
  *
  */
 public static Var Executar(@ParamMetaData(description = "valorEntrada", id = "d29e02a9") @RequestBody(required = false) Var valorEntrada) throws Exception {
@@ -27,7 +27,7 @@ public static Var Executar(@ParamMetaData(description = "valorEntrada", id = "d2
     return
 Var.valueOf(
 Var.valueOf("A resposta é:").getObjectAsString() +
-Var.valueOf(romanoParaInteiro(valorEntrada)).getObjectAsString());
+Var.valueOf(validPalindrome(valorEntrada)).getObjectAsString());
    }
  }.call();
 }
@@ -37,7 +37,7 @@ Var.valueOf(romanoParaInteiro(valorEntrada)).getObjectAsString());
  * @param stringRomano
  *
  * @author Yury Trindade Da Cunha
- * @since 25/03/2025, 12:51:03
+ * @since 26/03/2025, 10:46:11
  *
  */
 public static Var romanoParaInteiro(@ParamMetaData(description = "stringRomano", id = "f1614b22") @RequestBody(required = false) Var stringRomano) throws Exception {
@@ -92,6 +92,74 @@ public static Var romanoParaInteiro(@ParamMetaData(description = "stringRomano",
         numAnterior = numAtual;
     } // end for
     return resposta;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @param frase
+ *
+ * @author Yury Trindade Da Cunha
+ * @since 26/03/2025, 10:46:11
+ *
+ */
+public static Var validPalindrome(@ParamMetaData(description = "frase", id = "9e7a4cbb") @RequestBody(required = false) Var frase) throws Exception {
+ return new Callable<Var>() {
+
+   private Var comeco = Var.VAR_NULL;
+   private Var fim = Var.VAR_NULL;
+   private Var caractereComeco = Var.VAR_NULL;
+   private Var caractereFim = Var.VAR_NULL;
+   private Var letrasDigitos = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    comeco =
+    Var.valueOf(1);
+    fim =
+    Var.valueOf(frase.length());
+    while (
+    Var.valueOf(comeco.compareTo(fim) <= 0).getObjectAsBoolean()) {
+        caractereComeco =
+        Var.valueOf(cronapi.text.Operations.getLetter(frase,comeco));
+        caractereFim =
+        Var.valueOf(cronapi.text.Operations.getLetter(frase,fim));
+        // region Checar se e caractere ou digito
+            letrasDigitos =
+            Var.valueOf("abcdefghijklmnopqrstuvxwyz0123456789");
+            if (
+            Var.valueOf(!
+            Var.valueOf(letrasDigitos.getObjectAsString().indexOf(
+            Var.valueOf(caractereComeco.getObjectAsString().toLowerCase()).getObjectAsString()) + 1).equals(
+            Var.valueOf(0))).getObjectAsBoolean()) {
+                comeco =
+                cronapi.math.Operations.sum(comeco,
+                Var.valueOf(1));
+            } else if (
+            Var.valueOf(!
+            Var.valueOf(letrasDigitos.getObjectAsString().indexOf(
+            Var.valueOf(caractereFim.getObjectAsString().toLowerCase()).getObjectAsString()) + 1).equals(
+            Var.valueOf(0))).getObjectAsBoolean()) {
+                fim =
+                cronapi.math.Operations.sum(fim,
+                Var.valueOf(1));
+            } else {
+                if (
+                Var.valueOf(!caractereComeco.equals(caractereFim)).getObjectAsBoolean()){
+                  return
+                Var.VAR_FALSE;
+                }
+                comeco =
+                cronapi.math.Operations.sum(comeco,
+                Var.valueOf(1));
+                fim =
+                cronapi.math.Operations.subtract(fim,
+                Var.valueOf(1));
+            }
+        // endregion Checar se e caractere ou digito
+    } // end while
+    return
+Var.VAR_TRUE;
    }
  }.call();
 }
