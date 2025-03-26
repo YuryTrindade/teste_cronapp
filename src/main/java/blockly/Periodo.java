@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param Periodo<app.entity.Periodo>
  *
  * @author Yury Trindade Da Cunha
- * @since 26/03/2025, 12:45:07
+ * @since 26/03/2025, 14:20:30
  *
  */
 public static Var antesDeInserir(@ParamMetaData(description = "Periodo", id = "43b492fd") @RequestBody(required = false) Var Periodo) throws Exception {
@@ -47,7 +47,7 @@ public static Var antesDeInserir(@ParamMetaData(description = "Periodo", id = "4
     Var.valueOf(
     cronapi.object.Operations.getObjectField(Periodo,
     Var.valueOf("periodo")).compareTo(
-    Var.valueOf(1)) >= 0).getObjectAsBoolean() &&
+    Var.valueOf(1)) >= 0).getObjectAsBoolean() ||
     Var.valueOf(
     cronapi.object.Operations.getObjectField(Periodo,
     Var.valueOf("periodo")).compareTo(
