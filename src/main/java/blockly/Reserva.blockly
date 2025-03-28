@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Reserva" ruleName="Reserva" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="1" scrollx="95.59375" scrolly="-499.9999999999992" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" score="9007199254740991" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defnoreturn" valueconstant="" x="-52" y="128">
+    <mutation>
+      <arg id="6867589f" name="Reserva&amp;lt;app.entity.Reserva&amp;gt;"/>
+    </mutation>
+    <field customattributes="" name="NAME">antesDeInserir</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="F%|Lb_2YaO@^Xq$}bF=h" origintype="variables_set" output="false" score="9007199254740991" tooltip="Define esta variável para o valor da entrada." type="variables_set" valueconstant="">
+        <field customattributes="" name="VAR">vagaAtual</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[MT4yY!A#N8t:p`(OWc[" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query','cronapi.database.Operations.query')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn" valueconstant="">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Vaga%22,%22namespace%22:%22app.entity.Vaga%22,%22dataSourceOptions%22:%7B%22id%22:%22app.Vaga%22,%22customId%22:%22Vaga%22,%22customQueryName%22:%22app.Vaga%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.Vaga%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22nome%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22status%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22localizacao%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:true%7D,%7B%22name%22:%22localizacao_info%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22Vaga%22,%22fullName%22:%22app.entity.Vaga%22,%22labelName%22:%22app.entity.Vaga%20(Vaga)%22%7D,%22alias%22:%22v%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v%22,%22type%22:%22string%22%7D%5D,%22rulesJoin%22:%5B%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22v.id%22,%22field%22:%22v.id%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22valueType%22:%22param%22,%22value%22:%22:id%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Ctv%20%5Cnfrom%20%5Cn%5CtVaga%20v%20%20%5Cnwhere%20%5Cn%5Ctv.id%20=%20:id%22,%22entity%22:%22Vaga%22,%22entityFullName%22:%22app.entity.Vaga%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22id%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="id"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#c88330" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Jv;:[@m%Ggw~0?c3jk2x" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField','cronapi.object.Operations.getObjectField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field" valueconstant="">
+                <mutation name="{{cronapi.object.Operations.getObjectField}}">
+                  <arg name="Objeto"/>
+                  <arg name="Caminho a percorrer"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block asynccall="false" colour="#aa2f00" datasourcetype="fieldFromObject" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="olExAmD3Iy[V2T;iUCNe" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField','cronapi.database.Operations.getField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field" valueconstant="">
+                    <mutation name="{{cronapi.database.Operations.getField}}">
+                      <arg name="Fonte de dados"/>
+                      <arg name="Nome do campo"/>
+                    </mutation>
+                    <value name="PARAM0">
+                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*(hH!FXj8eBeRu{_3Y2g" origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                        <field customattributes="" name="VAR">Reserva&lt;app.entity.Reserva&gt;</field>
+                      </block>
+                    </value>
+                    <value name="PARAM1">
+                      <block asynccall="false" colour="#db802b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".oEIrM40Nm{6wfxwy%;B" origintype="procedures_get_field_datasource" output="true" score="9007199254740991" type="procedures_get_field_datasource" valueconstant="">
+                        <mutation name="">
+                          <arg label="id" value="id"/>
+                          <arg label="user" value="user"/>
+                          <arg label="vaga" value="vaga"/>
+                          <arg label="data" value="data"/>
+                          <arg label="ativo" value="ativo"/>
+                          <arg label="periodo" value="periodo"/>
+                        </mutation>
+                        <field customattributes="" name="SELECT">vaga</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LLkO+xKue|K=Q,U)acFJ" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                    <field customattributes="" name="TEXT">id</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="el?tS$#hyA`2X=jh^iZV" origintype="controls_if" output="false" score="9007199254740991" tooltip="function () { [native code] }" type="controls_if" valueconstant="">
+            <value name="IF0">
+              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":9Vy3OYtzzU3prR`f*ER" origintype="logic_compare" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="logic_compare" valueconstant="">
+                <field customattributes="" name="OP">EQ</field>
+                <value name="A">
+                  <block asynccall="false" colour="#aa2f00" datasourcetype="fieldFromQuery" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l.jkX`2Z$CPtOfk;[1U(" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField','cronapi.database.Operations.getField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field" valueconstant="">
+                    <mutation name="{{cronapi.database.Operations.getField}}">
+                      <arg name="Fonte de dados"/>
+                      <arg name="Nome do campo"/>
+                    </mutation>
+                    <value name="PARAM0">
+                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="u:6kz[u~@?otu^6l$lk`" origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                        <field customattributes="" name="VAR">vagaAtual</field>
+                      </block>
+                    </value>
+                    <value name="PARAM1">
+                      <block asynccall="false" colour="#db802b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="kf#hRDqP5f|n_*dZ3V45" origintype="procedures_get_field_datasource" output="true" score="9007199254740991" type="procedures_get_field_datasource" valueconstant="">
+                        <mutation name="">
+                          <arg label="v" value="this[0]"/>
+                          <arg label="v.localizacao.id" value="this[0].localizacao.id"/>
+                          <arg label="v.id" value="this[0].id"/>
+                          <arg label="v.localizacao" value="this[0].localizacao"/>
+                          <arg label="v.localizacao.info" value="this[0].localizacao.info"/>
+                          <arg label="v.nome" value="this[0].nome"/>
+                          <arg label="v.status" value="this[0].status"/>
+                        </mutation>
+                        <field customattributes="" name="SELECT">this[0].status</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="UZXt#,ZHVxUqF=QOQ$-m" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                    <field customattributes="" name="TEXT">Fechada</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="QLo-WdL_Hf{.FbjKan:@" multilayer="false" namespace="cronapi.util.Operations.throwException" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ELan%C3%A7a%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20levantar%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Exce%C3%A7%C3%A3o%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.throwException','cronapi.util.Operations.throwException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" valueconstant="">
+                <mutation name="{{cronapi.util.Operations.throwException}}" return-raw-type="void">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Exceção"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?Cbf)ETL(;oWJJHyQ*Gb" multilayer="false" namespace="cronapi.util.Operations.createException" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3EMensagem%20da%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.createException','cronapi.util.Operations.createException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                    <mutation name="{{cronapi.util.Operations.createException}}" return-raw-type="cronapi.Var">
+                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6a/EW{,IRy[`@8*4B*sr" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                        <field customattributes="" name="TEXT">Essa vaga já está ocupada!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="OM])~Tp|NNZzFN`G%nc1" origintype="variables_set" output="false" score="9007199254740991" tooltip="Define esta variável para o valor da entrada." type="variables_set" valueconstant="">
+                <field customattributes="" name="VAR">periodoAtivo</field>
+                <value name="VALUE">
+                  <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xGpZf8)Z|}0f)=.+E`8[" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query','cronapi.database.Operations.query')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn" valueconstant="">
+                    <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Periodo%22,%22namespace%22:%22app.entity.Periodo%22,%22dataSourceOptions%22:%7B%22id%22:%22app.Periodo%22,%22customId%22:%22Periodo%22,%22customQueryName%22:%22app.Periodo%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.Periodo%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22periodo%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22ativo%22,%22type%22:%22Boolean%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22dataInicial%22,%22type%22:%22DateTime%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22dataFinal%22,%22type%22:%22DateTime%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:true%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22Periodo%22,%22fullName%22:%22app.entity.Periodo%22,%22labelName%22:%22app.entity.Periodo%20(Periodo)%22%7D,%22alias%22:%22p%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22p%22,%22type%22:%22string%22%7D%5D,%22rulesJoin%22:%5B%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22p.ativo%22,%22field%22:%22p.ativo%22,%22type%22:%22boolean%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22valueType%22:%22custom%22,%22value%22:%22true%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Ctp%20%5Cnfrom%20%5Cn%5CtPeriodo%20p%20%20%5Cnwhere%20%5Cn%5Ctp.ativo%20=%20true%22,%22entity%22:%22Periodo%22,%22entityFullName%22:%22app.entity.Periodo%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5D%22%7D" name="{{cronapi.database.Operations.query}}"/>
+                  </block>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="x0:$*ody0GJDcXu6aK8o" origintype="controls_if" output="false" score="9007199254740991" tooltip="function () { [native code] }" type="controls_if" valueconstant="">
+                    <mutation else="1"/>
+                    <value name="IF0">
+                      <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?Cp-Z3q;uQRanj{Z,+K4" inline="true" multilayer="false" namespace="cronapi.database.Operations.hasElement" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExiste%20registro%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifica%20se%20existe%20registro%20no%20cursor%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.hasElement','cronapi.database.Operations.hasElement')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                        <mutation name="{{cronapi.database.Operations.hasElement}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATASET" name="Fonte de dados"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="WH?7C)y@je|{Bt0?)${7" origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                            <field customattributes="" name="VAR">periodoAtivo</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~5(u2JW~SwqyG}a]*!Q`" multilayer="false" namespace="cronapi.database.Operations.updateField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20o%20campo%20informado%20no%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Valor%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.updateField','cronapi.database.Operations.updateField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" valueconstant="">
+                        <mutation name="{{cronapi.database.Operations.updateField}}" return-raw-type="void">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATASET" name="Fonte de dados"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Nome do campo"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Valor do campo"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".CZs~:M^FvPmGRzAz;^^" origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                            <field customattributes="" name="VAR">Reserva&lt;app.entity.Reserva&gt;</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="B%hyH7KjIeg+PpT3h~kS" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                            <field customattributes="" name="TEXT">periodo</field>
+                          </shadow>
+                        </value>
+                        <value name="ARG2">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xvH5~d`29*|l:jRj1K|o" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                            <field customattributes="" name="TEXT"/>
+                          </shadow>
+                          <block asynccall="false" colour="#c88330" datasourcetype="fieldFromQuery" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="B`k],!IdsCkWXd%4oDc8" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20Objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20a%20percorrer%20:%20Texto%3C/span%3E%3Cdiv%3E%20Exemplo:%20estado%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.Operations.getObjectField','cronapi.object.Operations.getObjectField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field" valueconstant="">
+                            <mutation name="{{cronapi.object.Operations.getObjectField}}">
+                              <arg name="Objeto"/>
+                              <arg name="Caminho a percorrer"/>
+                            </mutation>
+                            <value name="PARAM0">
+                              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")V,E1k8Y1{)nV|k70ZV." origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                                <field customattributes="" name="VAR">periodoAtivo</field>
+                              </block>
+                            </value>
+                            <value name="PARAM1">
+                              <block asynccall="false" colour="#c88330" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="w~9}lxk%?_ICpFQ)nWsr" origintype="procedures_get_field_object" output="true" score="9007199254740991" type="procedures_get_field_object" valueconstant="">
+                                <mutation name="">
+                                  <arg label="p" value="this[0]"/>
+                                  <arg label="p.id" value="this[0].id"/>
+                                  <arg label="p.ativo" value="this[0].ativo"/>
+                                  <arg label="p.dataFinal" value="this[0].dataFinal"/>
+                                  <arg label="p.dataInicial" value="this[0].dataInicial"/>
+                                  <arg label="p.periodo" value="this[0].periodo"/>
+                                </mutation>
+                                <field customattributes="" name="SELECT">this[0].periodo</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":`@xFVo;qCe9Z.MuX;y7" multilayer="false" namespace="cronapi.util.Operations.throwException" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ELan%C3%A7a%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20levantar%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Exce%C3%A7%C3%A3o%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.throwException','cronapi.util.Operations.throwException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" valueconstant="">
+                        <mutation name="{{cronapi.util.Operations.throwException}}" return-raw-type="void">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Exceção"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="w@YMjVGXaL-gxzN%u6Sr" multilayer="false" namespace="cronapi.util.Operations.createException" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3EMensagem%20da%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.createException','cronapi.util.Operations.createException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                            <mutation name="{{cronapi.util.Operations.createException}}" return-raw-type="cronapi.Var">
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Y@:N3)7W4bf,~@cF]gWw" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                                <field customattributes="" name="TEXT">Não há um período ativo, contrate o administrador..</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(?q)J]%0!9QAjr|f_C+8" origintype="controls_if" output="false" score="9007199254740991" tooltip="function () { [native code] }" type="controls_if" valueconstant="">
+                        <mutation else="1"/>
+                        <value name="IF0">
+                          <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")R@^gFT?AuSAg$EsuGTe" origintype="lists_getIndex" output="true" score="9007199254740991" tooltip="function(){var mode=thisBlock.getFieldValue(&quot;MODE&quot;),where=thisBlock.getFieldValue(&quot;WHERE&quot;),tooltip=&quot;&quot;;switch(mode+&quot; &quot;+where){case&quot;GET FROM_START&quot;:case&quot;GET FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM;break;case&quot;GET FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FIRST;break;case&quot;GET LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_LAST;break;case&quot;GET RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_RANDOM;break;case&quot;GET_REMOVE FROM_START&quot;:case&quot;GET_REMOVE FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM;break;case&quot;GET_REMOVE FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FIRST;break;case&quot;GET_REMOVE LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST;break;case&quot;GET_REMOVE RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM;break;case&quot;REMOVE FROM_START&quot;:case&quot;REMOVE FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM;break;case&quot;REMOVE FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST;break;case&quot;REMOVE LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST;break;case&quot;REMOVE RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM}if(&quot;FROM_START&quot;==where||&quot;FROM_END&quot;==where){var msg=&quot;FROM_START&quot;==where?Blockly.Msg.LISTS_INDEX_FROM_START_TOOLTIP:Blockly.Msg.LISTS_INDEX_FROM_END_TOOLTIP;tooltip+=&quot;  &quot;+msg.replace(&quot;%1&quot;,thisBlock.workspace.options.oneBasedIndex?&quot;#1&quot;:&quot;#0&quot;)}return tooltip}" type="lists_getIndex" valueconstant="">
+                            <mutation at="false" statement="false"/>
+                            <field customattributes="" name="MODE">GET</field>
+                            <field customattributes="" name="WHERE">FIRST</field>
+                            <value name="VALUE">
+                              <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~_M{{20VHz9z(p%#j9[e" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query','cronapi.database.Operations.query')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn" valueconstant="">
+                                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Reserva%22,%22namespace%22:%22app.entity.Reserva%22,%22dataSourceOptions%22:%7B%22id%22:%22app.Reserva%22,%22customId%22:%22Reserva%22,%22customQueryName%22:%22app.Reserva%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.Reserva%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22user%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22vaga%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22data%22,%22type%22:%22DateTime%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22ativo%22,%22type%22:%22Boolean%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22periodo%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22notEmpty%22:false,%22key%22:true%7D,%7B%22name%22:%22user_name%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D,%7B%22name%22:%22vaga_nome%22,%22type%22:%22String%22,%22nullable%22:true,%22notEmpty%22:false,%22key%22:false%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22Reserva%22,%22fullName%22:%22app.entity.Reserva%22,%22labelName%22:%22app.entity.Reserva%20(Reserva)%22%7D,%22alias%22:%22r%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22r.ativo%22,%22type%22:%22boolean%22%7D%5D,%22rulesJoin%22:%5B%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22r.user.normalizedUserName%22,%22field%22:%22r.user.normalizedUserName%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22valueType%22:%22param%22,%22value%22:%22:userNormalizedUserName%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Ctr.ativo%20%5Cnfrom%20%5Cn%5CtReserva%20r%20%20%5Cnwhere%20%5Cn%5Ctr.user.normalizedUserName%20=%20:userNormalizedUserName%22,%22entity%22:%22Reserva%22,%22entityFullName%22:%22app.entity.Reserva%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22userNormalizedUserName%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                                  <arg name="userNormalizedUserName"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!@_t5A)cKQ.%dU}{*8qH" multilayer="false" namespace="cronapi.text.Operations.normalize" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ENormalizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3ETransforma%20o%20texto%20permitindo%20uma%20classifica%C3%A7%C3%A3o%20e%20pesquisa%20mais%20f%C3%A1ceis%20do%20texto.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%20n%C3%A3o%20normalizado%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.text.Operations.normalize','cronapi.text.Operations.normalize')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                                    <mutation name="{{cronapi.text.Operations.normalize}}" return-raw-type="cronapi.Var">
+                                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Texto não normalizado"/>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" id="H8)`0pn+ZMyOdPWdyZpc" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                                        <field customattributes="" name="TEXT"/>
+                                      </shadow>
+                                      <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Rw_b1y4g499Tv_jNAzoF" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" score="33" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName','cronapi.util.Operations.getCurrentUserName')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                                        <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="c+HSzEgLVHSTMTfCgkw=" multilayer="false" namespace="cronapi.util.Operations.throwException" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ELan%C3%A7a%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20levantar%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Exce%C3%A7%C3%A3o%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.throwException','cronapi.util.Operations.throwException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" valueconstant="">
+                            <mutation name="{{cronapi.util.Operations.throwException}}" return-raw-type="void">
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Exceção"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3Q@71*v:rHB?YO7UI=bv" multilayer="false" namespace="cronapi.util.Operations.createException" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3ECria%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3EMensagem%20da%20exce%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.createException','cronapi.util.Operations.createException')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn" valueconstant="">
+                                <mutation name="{{cronapi.util.Operations.createException}}" return-raw-type="cronapi.Var">
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="|;y)^A5~Xw=r{CT6?HEC" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                                    <field customattributes="" name="TEXT">Você só pode reservar uma vaga por vez</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":Bx/b=O:F%GLpEK_J:*f" multilayer="false" namespace="cronapi.database.Operations.updateField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" score="9007199254740991" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20o%20campo%20informado%20no%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Valor%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide-next.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.updateField','cronapi.database.Operations.updateField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" valueconstant="">
+                            <mutation name="{{cronapi.database.Operations.updateField}}" return-raw-type="void">
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATASET" name="Fonte de dados"/>
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Nome do campo"/>
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Valor do campo"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Sh}!0=nnV_H=g{[8/7k$" origintype="variables_get" output="true" score="9007199254740991" tooltip="Retorna o valor desta variável." type="variables_get" valueconstant="">
+                                <field customattributes="" name="VAR">Reserva&lt;app.entity.Reserva&gt;</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LyF!1%c_ipr6T;nzj$d0" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                                <field customattributes="" name="TEXT">ativo</field>
+                              </shadow>
+                            </value>
+                            <value name="ARG2">
+                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xvH5~d`29*|l:jRj1K|o" origintype="text" output="true" score="9007199254740991" tooltip="function () { [native code] }" type="text" valueconstant="">
+                                <field customattributes="" name="TEXT"/>
+                              </shadow>
+                              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="bxembGkqmwnU^~RpWR/(" origintype="logic_boolean" output="true" score="9007199254740991" tooltip="Retorna verdadeiro ou falso." type="logic_boolean" valueconstant="">
+                                <field customattributes="" name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</blockly>

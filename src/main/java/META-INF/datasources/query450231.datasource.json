@@ -1,0 +1,308 @@
+{
+  "customId": "reservaMorador",
+  "queryName": "Reserva Moradores",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Reserva",
+  "entityFullName": "app.entity.Reserva",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Reserva",
+        "namespace": "app.entity.Reserva",
+        "dataSourceOptions": {
+          "id": "app.Reserva",
+          "customId": "Reserva",
+          "customQueryName": "app.Reserva",
+          "paramValues": [],
+          "entityFullName": "app.entity.Reserva",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "user",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "vaga",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "data",
+              "type": "DateTime",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "ativo",
+              "type": "Boolean",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "periodo",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": true
+            },
+            {
+              "name": "user_name",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "vaga_nome",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Reserva",
+          "fullName": "app.entity.Reserva",
+          "labelName": "app.entity.Reserva (Reserva)"
+        },
+        "alias": "r"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "r",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "r.user.id",
+          "field": "r.user.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "valueType": "param",
+          "value": ":userId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "pegarIDUsuarioLogado",
+        "blocklyClass": "blockly.UserControl",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.UserControl",
+          "sourcePath": "src/main/java/blockly/UserControl.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "signUp",
+              "hasReturn": "true",
+              "params": [
+                "username",
+                "email",
+                "password"
+              ]
+            },
+            {
+              "name": "resetPassword",
+              "hasReturn": "true",
+              "params": [
+                "email",
+                "isMobile"
+              ]
+            },
+            {
+              "name": "pegarIDUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": {
+      "type": "server",
+      "blocklyMethod": "antesDeInserir",
+      "blocklyClass": "blockly.Reserva",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "6867589f",
+          "name": "Reserva\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.Reserva",
+        "sourcePath": "src/main/java/blockly/Reserva.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "user": {
+      "type": "server",
+      "blocklyMethod": "pegarIDUsuarioLogado",
+      "blocklyClass": "blockly.UserControl",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.UserControl",
+        "sourcePath": "src/main/java/blockly/UserControl.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "signUp",
+            "hasReturn": "true",
+            "params": [
+              "username",
+              "email",
+              "password"
+            ]
+          },
+          {
+            "name": "resetPassword",
+            "hasReturn": "true",
+            "params": [
+              "email",
+              "isMobile"
+            ]
+          },
+          {
+            "name": "pegarIDUsuarioLogado",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "vaga": null,
+    "data": null,
+    "ativo": "true",
+    "periodo": null,
+    "user_name": null,
+    "vaga_nome": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "user": null,
+    "vaga": null,
+    "data": null,
+    "ativo": null,
+    "periodo": null,
+    "user_name": null,
+    "vaga_nome": null
+  },
+  "security": {
+    "id": null,
+    "user": null,
+    "vaga": null,
+    "data": null,
+    "ativo": null,
+    "periodo": null,
+    "user_name": null,
+    "vaga_nome": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query450231/",
+  "audit": false,
+  "swagger": false
+}
