@@ -216,9 +216,90 @@
     },
     "beforeUpdate": null,
     "beforeDelete": null,
-    "afterInsert": null,
+    "afterInsert": {
+      "type": "server",
+      "blocklyMethod": "depoisDeInserir",
+      "blocklyClass": "blockly.Reserva",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "702fe466",
+          "name": "Reserva\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.Reserva",
+        "sourcePath": "src/main/java/blockly/Reserva.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeInserir",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeDeletar",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
     "afterUpdate": null,
-    "afterDelete": null,
+    "afterDelete": {
+      "type": "server",
+      "blocklyMethod": "depoisDeDeletar",
+      "blocklyClass": "blockly.Reserva",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Reserva\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.Reserva",
+        "sourcePath": "src/main/java/blockly/Reserva.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeInserir",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeInserir",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeDeletar",
+            "hasReturn": "false",
+            "params": [
+              "Reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
     "onNavigate": null,
     "onAuthorize": null,
     "onError": null

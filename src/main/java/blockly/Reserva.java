@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param Reserva<app.entity.Reserva>
  *
  * @author Yury Trindade Da Cunha
- * @since 27/03/2025, 12:58:07
+ * @since 28/03/2025, 10:38:03
  *
  */
 public static void antesDeInserir(@ParamMetaData(description = "Reserva", id = "6867589f") @RequestBody(required = false) Var Reserva) throws Exception {
@@ -67,6 +67,62 @@ public static void antesDeInserir(@ParamMetaData(description = "Reserva", id = "
         Var.valueOf("ativo"),
         Var.VAR_TRUE);
     }
+   return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @param Reserva<app.entity.Reserva>
+ *
+ * @author Yury Trindade Da Cunha
+ * @since 28/03/2025, 10:38:03
+ *
+ */
+public static void depoisDeDeletar(@ParamMetaData(description = "Reserva", id = "702fe466") @RequestBody(required = false) Var Reserva) throws Exception {
+  new Callable<Var>() {
+
+   private Var objetoVagaReservada = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    objetoVagaReservada =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Vaga"),Var.valueOf("select \n	v \nfrom \n	Vaga v  \nwhere \n	v.id = :id"),Var.valueOf("id",
+    cronapi.object.Operations.getObjectField(
+    cronapi.object.Operations.getObjectField(Reserva,
+    Var.valueOf("vaga")),
+    Var.valueOf("id"))));
+    cronapi.database.Operations.updateField(objetoVagaReservada,
+    Var.valueOf("status"),
+    Var.valueOf("Aberta"));
+   return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @param Reserva<app.entity.Reserva>
+ *
+ * @author Yury Trindade Da Cunha
+ * @since 28/03/2025, 10:38:03
+ *
+ */
+public static void depoisDeInserir(@ParamMetaData(description = "Reserva", id = "702fe466") @RequestBody(required = false) Var Reserva) throws Exception {
+  new Callable<Var>() {
+
+   private Var objetoVagaReservada = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    objetoVagaReservada =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Vaga"),Var.valueOf("select \n	v \nfrom \n	Vaga v  \nwhere \n	v.id = :id"),Var.valueOf("id",
+    cronapi.object.Operations.getObjectField(
+    cronapi.object.Operations.getObjectField(Reserva,
+    Var.valueOf("vaga")),
+    Var.valueOf("id"))));
+    cronapi.database.Operations.updateField(objetoVagaReservada,
+    Var.valueOf("status"),
+    Var.valueOf("Fechada"));
    return Var.VAR_NULL;
    }
  }.call();
